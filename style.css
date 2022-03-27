@@ -60,3 +60,34 @@ body{
     display:grid;
     border:2px solid black;
 }
+.sidebar{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.5fr 1fr;
+    grid-template-areas:    "sidebar__logo"
+                            "sidebar__menu"
+                            "sidebar__site-help";
+
+}
+
+.sidebar ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+
+.sidebar__logo{
+    grid-area:sidebar__logo;
+}
+
+.sidebar__menu{
+    grid-area:sidebar__menu;
+}
+
+.sidebar__site-help{
+    grid-area:sidebar__site-help;
+}
+
+.header__top > *{
+    display:inline;
+}
