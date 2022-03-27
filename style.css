@@ -13,6 +13,7 @@ body{
     grid-template-rows: 0.8fr 2fr;
     grid-template-areas:"sidebar header"
                         "sidebar content"    ;
+    gap:10px;
 }
 
 .header{
@@ -28,4 +29,34 @@ body{
 .content{
     border:2px yellow solid;
     grid-area: content;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap:10px;
+}
+.content__projects{
+    overflow: hidden;
+    display: grid;
+    border:2px solid purple;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: repeat(auto-fit,20%);
+    gap: 10px;
+}
+.content__projects .projects{
+    display:inline;
+    height: minmax(1fr,100px);
+    width:minmax(1fr,100px);
+    border:2px solid black;
+}
+.content__extra{
+    display: grid;
+}
+
+.content__extra .content__announcements{
+    display:grid;
+    border:2px solid black;
+}
+
+.content__extra .content__trending{
+    display:grid;
+    border:2px solid black;
 }
