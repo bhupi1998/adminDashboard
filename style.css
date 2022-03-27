@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    height:100%;
+}
+body{
+    margin:0;
+    height:100%;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    grid-template-rows: 0.8fr 2fr;
+    grid-template-areas:"sidebar header"
+                        "sidebar content"    ;
+}
+
+.header{
+    border:2px black solid;
+    grid-area: header;
+}
+
+.sidebar{
+    border:2px red solid;
+    grid-area:sidebar;
+}
+
+.content{
+    border:2px yellow solid;
+    grid-area: content;
+}
