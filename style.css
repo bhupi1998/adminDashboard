@@ -7,6 +7,7 @@
 
 html{
     height:100%;
+    width: 100%;
 }
 
 ul{
@@ -15,10 +16,10 @@ ul{
 }
 body{
     margin:0;
-    height:100%;
+    height:100vh;
     display: grid;
-    grid-template-columns: 0.5fr 2fr;
-    grid-template-rows: 0.8fr 2fr;
+    grid-template-columns: minmax(200px,250px) 1fr;
+    grid-template-rows: 0.2fr 1fr;
     grid-template-areas:"sidebar header"
                         "sidebar content";
     font-family: 'Roboto', sans-serif;
@@ -38,14 +39,20 @@ body{
     grid-area:sidebar;
     color:white;
     display: grid;
-    grid-template-columns:0.1fr 1fr;
-    grid-template-rows: 0.2fr 0.5fr 1fr;
+    grid-template-columns:20px 1fr;/*extra column to make a gap on left side*/
+    grid-template-rows: 100px 200px 100px;
     grid-template-areas:    "sidebar__logo sidebar__logo"
                             ". sidebar__menu"
                             ". sidebar__site-help";
     font-weight: 500;
 }
 
+.sidebar li{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    
+}
 .material_icons{
     color:white;
 }
@@ -54,6 +61,7 @@ body{
     background-color: #E1E7EF;
     grid-area: content;
     display: grid;
+    height: 100%;
     grid-template-columns: 2fr 1fr;
     gap:10px;
 }
@@ -86,21 +94,27 @@ body{
 .content__extra{
     grid-column: 2/3;
     display: grid;
-    grid-template-rows: 200px 200px;
+    grid-template-rows: 1fr 1fr;
     overflow: hidden;
+    gap:5px;
 }
 
 .content__trending .content__announcements{
     display:flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .content__announcements ul{
     list-style:none;
     overflow: hidden;
-    height: 50%;
     background-color: white;
     padding:var(--content-extra-padding);
+}
+
+.content__announcements li{
+    height:100px;
+    overflow: hidden;
 }
 
 .content__announcements .announcement{
@@ -109,13 +123,9 @@ body{
 
 .content__trending ul{
     list-style: none;
-    height:500px;
     overflow:hidden;
     background-color: white;
     padding:var(--content-extra-padding);
-}
-.content__extra .content__trending{
-    display:grid;
 }
 .sidebar ul{
     list-style: none;
@@ -125,16 +135,23 @@ body{
 
 .sidebar__logo{
     grid-area:sidebar__logo;
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: start;
 }
 
-#dashboard-logo{
-    font-size: 1.5em;
+#dashboard{
+    font-size: 1.8em;
 }
 
 .sidebar__menu{
     grid-area:sidebar__menu;
+}
+
+#sidebar__icon{
+    font-size: 2em;;   
 }
 
 .sidebar__site-help{
