@@ -7,67 +7,142 @@
     <title>Admin dashboard</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+
 </head>
 <body>
     <div class="header">
         <div class="header__top">
-            <p>search icon here</p>
-            <input type="text" name="search-bar" id="search-bar">
-            <p>bell icon</p>
-            <p>profile pic</p>
-            <p>profile name</p>
+            <div class="top__left">
+                <span class="material-icons">
+                    search
+                    </span>
+                <input type="text" name="search-bar" id="search-bar">
+            </div>
+            <div class="top__right">
+                <span class="material-icons">
+                    notifications_active
+                    </span>
+                <img src="images/Octocat.png" alt="profile-pic" height="40px">
+                <p>bhupi1998</p>
+            </div>
         </div>
         <div class="header__bottom">
             <div class="bottom__left">
-                <p>Hi there, blah blah</p>
+                <img src="images/Octocat.png" alt="profile-pic" height="70px">
+                <div>
+                    <p>Hi there,</p>
+                    <p>Bhupinder Singh (@bhupi1998)</p>
+                </div>
             </div>
             <div class="bottom__right">
-                <button>New</button>
-                <button>Upload</button>
-                <button>Share</button>
+                <button class="button-normal">New</button>
+                <button class="button-normal">Upload</button>
+                <button class="button-normal">Share</button>
             </div>
         </div>
     </div>
     <div class="sidebar">
-        <div class="sidebar__logo">Dashboard</div>
+        <div class="sidebar__logo">
+            <span class="material-icons" id="dashboard">
+                dashboard
+            </span>
+            Dashboard
+        </div>
         <ul class="sidebar__menu">
-            <li>Home</li>
-            <li>Profile</li>
-            <li>Messages</li>
-            <li>History</li>
-            <li>Tasks</li>
-            <li>Communities</li>
+            <li>
+                <span class="material-icons">
+                home
+                </span>
+                Home
+            </li>
+            <li>
+                <span class="material-icons">
+                    person
+                </span>
+                Profile
+            </li>
+            <li>
+                <span class="material-icons">
+                    message
+                </span>
+                Messages
+            </li>
+            <li>
+                <span class="material-icons">
+                    schedule
+                </span>
+                History
+            </li>
+            <li>
+                <span class="material-icons">
+                    task
+                </span>
+                Tasks
+            </li>
+            <li>
+                <span class="material-icons">
+                    sports_martial_arts
+                </span>
+                Communities
+            </li>
         </ul>
         <ul class="sidebar__site-help">
-            <li>Settings</li>
-            <li>Support</li>
-            <li>Privacy</li>
+            <li>
+                <span class="material-icons">
+                    settings
+                </span>
+                Settings
+            </li>
+            <li>
+                <span class="material-icons">
+                help_center
+                </span>
+                Support
+            </li>
+            <li>
+                <span class="material-icons">
+                    verified
+                </span>
+                Privacy
+            </li>
         </ul>
     </div>
     <div class="content">
         <div class="content__projects">
-            <div class="projects">project1</div>
-            <div class="projects">project2</div>
-            <div class="projects">project3</div>
-            <div class="projects">project4</div>
-            <div class="projects">project5</div>
-            <div class="projects">project6</div>
-            <div class="projects">project7</div>
-            <div class="projects">project8</div>
+            <h2>Your Projects</h2>
+            <ul id="project-list">
+                <li class="project">project1</li>
+                <li class="project">project2</li>
+                <li class="project">project3</li>
+                <li class="project">project4</li>
+                <li class="project">project5</li>
+                <li class="project">project6</li>
+                <li class="project">project7</li>
+                <li class="project">project8</li>
+            </ul>
         </div>
         <div class="content__extra"><!--Contains extra info such as announcements and Trending-->
             <div class="content__announcements">
                 <h2>Announcements</h2>
-                <div>announcing stuff</div>
-                <div>announcing stuff</div>
-                <div>announcing stuff</div>
+                <ul>
+                    <li>announcing</li>
+                    <li>announcing</li>
+                    <li>announcing</li>
+                </ul>
             </div>
             <div class="content__trending">
                 <h2>Trending</h2>
-                <div>trending stuff</div>
-                <div>trending stuff</div>
-                <div>trending stuff</div>
-                <div>trending stuff</div>
+                <ul>
+                    <li>trending</li>
+                    <li>trending</li>
+                    <li>trending</li>
+                    <li>trending</li>
+                </ul>
             </div>
         </div>
     </div>
