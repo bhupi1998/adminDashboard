@@ -232,3 +232,12 @@ body{
     font-size: 1.2em;
     font-weight: bold;
 }
+.trend{
+    display: flex;
+    gap:10px;
+}
+.trend__profile-pic{
+    height:50px;
+    width:50px;
+    border-radius: 50px;
+}
